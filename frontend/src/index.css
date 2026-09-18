@@ -1,0 +1,18 @@
+/* Reset and base configuration */
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0b0f19;
+  color: #f3f4f6;
+  font-family: 'Inter', 'Noto Sans Gujarati', system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+}
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+}
