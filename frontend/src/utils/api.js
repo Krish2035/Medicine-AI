@@ -1,4 +1,14 @@
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api';
+// Normalize API base URL: handle trailing slashes, double slashes, and auto-append /api if missing
+function getApiBaseUrl() {
+  let url = (import.meta.env.VITE_API_BASE_URL || 'http://localhost:5000/api').trim();
+  url = url.replace(/\/+$/, ''); // remove trailing slashes
+  if (!url.endsWith('/api')) {
+    url = `${url}/api`;
+  }
+  return url;
+}
+
+const API_BASE_URL = getApiBaseUrl();
 
 /**
  * Fetch server status and key configuration
