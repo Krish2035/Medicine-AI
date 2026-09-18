@@ -4,6 +4,7 @@ import DisclaimerAlert from './components/DisclaimerAlert';
 import ChatInterface from './components/ChatInterface';
 import MedicineCatalog from './components/MedicineCatalog';
 import MedicineDetailModal from './components/MedicineDetailModal';
+import InstallPwaPrompt from './components/InstallPwaPrompt';
 import { fetchServerStatus } from './utils/api';
 import { translations } from './utils/translations';
 import './App.css';
@@ -42,6 +43,9 @@ export default function App() {
       />
 
       <main className="main-content">
+        {/* PWA Install Prompt Banner */}
+        <InstallPwaPrompt language={language} />
+
         {/* Emergency Alert Banner */}
         <DisclaimerAlert language={language} />
 

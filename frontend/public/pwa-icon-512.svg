@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="pwaGrad512" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10b981" />
+      <stop offset="100%" stop-color="#06b6d4" />
+    </linearGradient>
+    <filter id="pwaGlow512" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" result="glow" />
+      <feComposite in="SourceGraphic" in2="glow" operator="over" />
+    </filter>
+  </defs>
+  
+  <!-- Background with rounded corners -->
+  <rect width="512" height="512" rx="112" fill="#0b0f19" />
+  <rect x="14" y="14" width="484" height="484" rx="98" fill="none" stroke="rgba(16, 185, 129, 0.3)" stroke-width="4" />
+  
+  <!-- Central Soft Glow -->
+  <circle cx="256" cy="256" r="160" fill="rgba(16, 185, 129, 0.15)" filter="url(#pwaGlow512)" />
+  
+  <!-- Medical Heartbeat Wave Line -->
+  <g fill="none" stroke="url(#pwaGrad512)" stroke-width="32" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M110 256 h64 l38 -86 l64 172 l48 -112 l32 26 h46" />
+  </g>
+  
+  <!-- Medical Plus Symbol -->
+  <g stroke="#34d399" stroke-width="14" stroke-linecap="round">
+    <path d="M256 120 v48 M232 144 h48" />
+  </g>
+  <circle cx="390" cy="130" r="12" fill="#06b6d4" />
+</svg>
